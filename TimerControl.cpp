@@ -29,3 +29,18 @@ uint64_t TimerControl::micros(void)
     return static_cast<uint64_t>(T_dur.count());
 }
 
+void TimerControl::reset(void)
+{
+    // Save time point at object constructor.
+    T_origin = std::chrono::high_resolution_clock::now();
+}
+
+void TimerControl::delayMillis(uint64_t value)
+{
+
+}
+
+void TimerControl::delayMicros(uint64_t value)
+{
+
+}

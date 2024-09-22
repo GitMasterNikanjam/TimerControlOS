@@ -4,10 +4,14 @@
 // #########################################################################
 
 #include <chrono>
+#include <thread>
 
 class TimerControl
 {
     public:
+
+        // Constructor.
+        TimerControl();
 
         // Calculate time from origin time point in milliseconds.
         uint64_t millis(void);
@@ -15,8 +19,14 @@ class TimerControl
         // Calculate time from origin time point in microseconds.
         uint64_t micros(void);
 
-        // Constructor.
-        TimerControl();
+        // Reset timer to zero. Reset time origin point to new value.
+        void reset(void);
+
+        // Delay certain milliseconds by sleep the thread.
+        void delayMillis(uint64_t value);
+
+        // Delay certain microseconds by sleep the thread.
+        void delayMicros(uint64_t value);
 
     private:
 
