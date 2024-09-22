@@ -2,15 +2,19 @@
 #define TIMER_CONTROL_H
 
 // #########################################################################
+// Include libraries:
 
 #include <chrono>
 #include <thread>
+
+// ########################################################################
+// TimerControl class
 
 class TimerControl
 {
     public:
 
-        // Constructor.
+        // Constructor. Init timer origin point.
         TimerControl();
 
         // Calculate time from origin time point in milliseconds.
@@ -27,6 +31,9 @@ class TimerControl
 
         // Delay certain microseconds by sleep the thread.
         void delayMicros(uint64_t value);
+
+        // High precicion delay microseconds. It works by 
+        void delayMicrosHighPrecision(uint64_t value);
 
     private:
 

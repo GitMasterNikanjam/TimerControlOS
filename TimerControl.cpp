@@ -44,3 +44,9 @@ void TimerControl::delayMicros(uint64_t value)
 {
     std::this_thread::sleep_for(std::chrono::microseconds(value));
 }
+
+void TimerControl::delayMicrosHighPrecision(uint64_t value) 
+{
+    uint64_t start = micros();
+    while ( (micros() - start) < value);
+}

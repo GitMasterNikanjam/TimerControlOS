@@ -12,15 +12,19 @@
 using namespace std;
 
 TimerControl timer;
+uint64_t T;
 
 int main()
 {
 
     while(1)
     {
-        cout << timer.micros() << endl;
+        
+        T = timer.micros();
 
-        timer.delayMicros(1000);
+        timer.delayMicrosHighPrecision(1000);
+
+        cout << timer.micros() - T << endl;
     }
 
     return 0;
