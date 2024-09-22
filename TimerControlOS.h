@@ -5,7 +5,7 @@
 
 #include <chrono>
 
-class TimerControl
+class TimerControlOS
 {
     public:
 
@@ -16,7 +16,7 @@ class TimerControl
         uint64_t micros(void);
 
         // Constructor.
-        TimerControl();
+        TimerControlOS();
 
     private:
 

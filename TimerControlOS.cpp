@@ -1,13 +1,13 @@
-#include "TimerControl.h"
+#include "TimerControlOS.h"
 
 
-TimerControl::TimerControl(void)
+TimerControlOS::TimerControlOS(void)
 {
     // Save time point at object constructor.
     T_origin = std::chrono::high_resolution_clock::now();
 }
 
-uint64_t TimerControl::millis(void)
+uint64_t TimerControlOS::millis(void)
 {
     std::chrono::time_point<std::chrono::system_clock> T_point;
     // Get Current time point
@@ -18,7 +18,7 @@ uint64_t TimerControl::millis(void)
     return static_cast<uint64_t>(T_dur.count());
 }
 
-uint64_t TimerControl::micros(void)
+uint64_t TimerControlOS::micros(void)
 {
     std::chrono::time_point<std::chrono::system_clock> T_point;
     // Get Current time point
