@@ -1,5 +1,5 @@
 // For compile and build:
-// mkdir -p ./bin && g++ -o ex1 ex1.cpp ../TimerControl.cpp
+// mkdir -p ./bin && g++ -o ./bin/ex1 ex1.cpp ../TimerControl.cpp
 
 // For run:
 // ./bin/ex1
@@ -16,6 +16,12 @@ TimerControl timer;
 int main()
 {
 
-    
+    while(1)
+    {
+        cout << timer.micros() << endl;
+
+        timer.delayMicros(1000);
+    }
+
     return 0;
 }

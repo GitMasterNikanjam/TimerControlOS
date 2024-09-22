@@ -1,2 +1,16 @@
 .vscode/
-examples/bin/
+main
+log.txt
+LOG.txt
+*.
+build/
+bin/
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
